@@ -50,7 +50,15 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+let employeeUpdater = () => {
+  for(let key in employees){
+    if(employees[key].firstName === 'Theo'){
+      delete employees[key].firstName;
+    } else if (employees[key].firstName === 'Lorie'){
+      employees[key] = 'HR'
+    }
+  } return employees;
+}
 
 
 
@@ -138,7 +146,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  for (let key in myCar.accidents){
+    myCar.accidents[key].atFaultForAccidents = false;
+  }
+}
 
 
 
@@ -157,6 +169,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(){
+  for (let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j <numsArr[i].length; j++){
+      if(numsArr[i][j].length % 2 !== 0){
+        numsArr[i][j] = 'odd'
+      } else if(numsArr[i][j].length % 2 === 0){
+        numsArr[i][j] = 'even'
+      }
+    }
+  }
+  return numsArr
+}
+
 
 

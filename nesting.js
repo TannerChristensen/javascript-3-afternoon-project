@@ -54,8 +54,8 @@ let employeeUpdater = () => {
   for(let key in employees){
     if(employees[key].firstName === 'Theo'){
       delete employees[key].firstName;
-    } else if (employees[key].firstName === 'Lorie'){
-      employees[key] = 'HR'
+    } else if (employees[key].firstName === "Lorie"){
+      employees[key] = "HR"
     }
   } return employees;
 }
